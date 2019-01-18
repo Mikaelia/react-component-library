@@ -61,7 +61,7 @@
     "gen:docs": "node scripts/generateComponentData.js",
     "gen:docs-watch": "npm run gen:docs -- --watch",
     "build:docs": "node scripts/build.js",
-    "build": "npm run build:docs",
+    "predeploy:docs": "npm run build:docs",
     "test": "node scripts/test.js --env-jsdom",
     "deploy:docs": "gh-pages -d build"
   },
@@ -69,7 +69,6 @@
     "extends": "react-app"
   },
   "homepage": "http://mikaelia.github.io/react-component-library/",
-
   "browserslist": [
     ">0.2%",
     "not dead",
