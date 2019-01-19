@@ -21,6 +21,7 @@
         "pluralsight"
     ],
     "dependencies": {
+        "cpx": "^1.5.0",
         "react": "^16.7.0",
         "react-dom": "^16.7.0"
     },
@@ -97,7 +98,8 @@
         "deploy:docs": "gh-pages -d build",
         "build:css": "cpx \"./src/components/**/*.css\" ./lib",
         "prebuild:lib": "rimraf lib",
-        "build:lib": "npm-run-all --parallel build:commonjs build:css build:copy-files",
+        "build:copy-files": "node scripts/copyBuildFiles.js",
+        "build:lib": "npm run build:commonjs && npm run build:css",
         "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore spec.js",
         "prepublish": "npm run build:lib"
     },
