@@ -267,7 +267,7 @@ module.exports = function(webpackEnv) {
         "react-native": "react-native-web",
         // any time that webpack sees component-library on import, translate to current
         // directory name, and up into src into component folder
-        "component-library": path.resolve(__dirname, "../src/components")
+        "component-library/lib": path.resolve(__dirname, "../src/components")
       },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding

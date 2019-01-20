@@ -1,0 +1,222 @@
+@import '../colors.module.scss';
+@import '../variables.module.scss';
+@import './config.module.scss';
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    border: 0;
+    padding: 0;
+    height: var(--button-height);
+    outline: none;
+    letter-spacing: 0;
+    line-height: var(--button-height);
+    font-size: calc(1.4 * var(--unit));
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition:
+        box-shadow 0.2s var(--animation-curve-fast-out-linear-in),
+        background-color 0.2s var(--animation-curve-default),
+        color 0.2s var(--animation-curve-default);
+    cursor: pointer;
+
+    &>input {
+        position: absolute;
+        height: 0.1px;
+        width: 0.1px;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+    &::-moz-focus-inner {
+        border: 0;
+    }
+
+    &>svg {
+        display: inline-block;
+        fill: currentColor;
+        font-size: 120%;
+        height: var(--button-height);
+        vertical-align: top;
+        width: 1em;
+    }
+
+    &>* {
+        pointer-events: none;
+    }
+}
+
+.squared {
+    border-radius: var(--button-border-radius);
+    min-width: var(--button-squared-min-width);
+    padding: var(--button-squared-padding);
+
+    & .icon {
+        font-size: 120%;
+        margin-right: var(--button-squared-icon-margin);
+        vertical-align: middle;
+    }
+
+    &>svg {
+        margin-right: calc(0.5 * var(--unit));
+    }
+}
+
+.solid {
+    box-shadow: var(--shadow-2p);
+
+    &:active {
+        box-shadow:
+            0 0 5px rgba(0, 0, 0, 0.18),
+            0 5px 10px rgba(0, 0, 0, 0.36);
+    }
+}
+
+.raised {
+    box-shadow: var(--shadow-2p);
+    composes: button;
+    composes: squared;
+    composes: solid;
+}
+
+.flat {
+    background: transparent;
+    composes: button;
+    composes: squared;
+}
+
+.round {
+    border-radius: 50%;
+    box-shadow:
+        0 1px 1.5px 0 rgba(0, 0, 0, 0.12),
+        0 1px 1px 0 rgba(0, 0, 0, 0.24);
+    composes: button;
+    composes: solid;
+    font-size: var(--button-round-font-size);
+    height: var(--button-round-height);
+    width: var(--button-round-height);
+
+    & .icon {
+        line-height: var(--button-round-height);
+    }
+
+    &.mini {
+        font-size: var(--button-round-mini-font-size);
+        height: var(--button-round-mini-height);
+        width: var(--button-round-mini-height);
+
+        & .icon {
+            line-height: var(--button-round-mini-height);
+        }
+    }
+}
+
+.primary {
+
+    &.raised,
+    &.round {
+        background: var(--button-primary-color);
+        color: var(--button-primary-color-contrast);
+    }
+
+    &.flat {
+        color: var(--button-primary-color);
+
+        &:hover {
+            background: var(--button-primary-color-hover);
+        }
+    }
+
+    &.toggle {
+        color: var(--button-primary-color);
+
+        &:focus:not(:active) {
+            background: var(--button-primary-color-hover);
+        }
+    }
+}
+
+.accent {
+
+    &.raised,
+    &.round {
+        background: var(--button-accent-color);
+        color: var(--button-accent-color-contrast);
+    }
+
+    &.flat {
+        color: var(--button-accent-color);
+
+        &:hover {
+            background: var(--button-accent-color-hover);
+        }
+    }
+
+    &.toggle {
+        color: var(--button-accent-color);
+
+        &:focus:not(:active) {
+            background: var(--button-accent-color-hover);
+        }
+    }
+}
+
+.neutral {
+
+    &.raised,
+    &.round {
+        background-color: var(--button-neutral-color);
+        color: var(--button-neutral-color-contrast);
+    }
+
+    &.flat {
+        color: var(--button-neutral-color-contrast);
+
+        &:hover {
+            background: var(--button-neutral-color-hover);
+        }
+    }
+
+    &.toggle {
+        color: var(--button-neutral-color-contrast);
+
+        &:focus:not(:active) {
+            background: var(--button-neutral-color-hover);
+        }
+    }
+
+    &.inverse {
+
+        &.raised,
+        &.round {
+            background-color: var(--button-neutral-color-contrast);
+            color: var(--button-neutral-color);
+        }
+
+        &.flat {
+            color: var(--button-neutral-color);
+
+            &:hover {
+                background: var(--button-neutral-color-hover);
+            }
+        }
+
+        &.toggle {
+            color: var(--button-neutral-color);
+
+            &:focus:not(:active) {
+                background: var(--button-neutral-color-hover);
+            }
+        }
+    }
+}

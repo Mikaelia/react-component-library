@@ -1,5 +1,5 @@
 import React from "react";
-import TextInput from "component-library/TextInputBEM";
+import TextInput from "component-library/lib/TextInputBEM";
 
 /** Error TextBox */
 export default class ExampleErrorBEM extends React.Component {
