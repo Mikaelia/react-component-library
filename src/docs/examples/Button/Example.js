@@ -1,14 +1,25 @@
 import React from "react";
-import Button from "component-library/lib/Button";
+import Button from "component-library/lib/Button/";
 
-export default function Example() {
+/** Standard Buttons */
+export default function ExampleButtons() {
   return (
-    <div>
-      <Button icon="check" label="I'm a button" raised accent />
-      <br />
+    <div style={styles}>
+      <Button
+        icon="check"
+        href="https://github.com/Mikaelia"
+        label="I'm a button"
+        raised
+        accent
+      />
+      <Button icon="check" label="I'm a button" flat />
       <Button label="I'm a button" raised primary />
-      <br />
-      <Button icon="add" round mini accent />
     </div>
   );
 }
+
+const styles = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-around"
+};

@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "./Header";
 import Navigation from "./Navigation";
 import ComponentPage from "./ComponentPage";
 import componentData from "../../config/componentData";
@@ -27,7 +28,8 @@ export default class Docs extends React.Component {
       : componentData[0];
 
     return (
-      <div>
+      <div className="docs">
+        <Header />
         <Navigation
           components={componentData.map(component => component.name)}
         />

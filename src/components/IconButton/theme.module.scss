@@ -1,0 +1,105 @@
+@import '../colors.module.scss';
+@import '../variables.module.scss';
+@import './config.module.scss';
+
+.button {
+    display: inline-block;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    border: 0;
+    padding: 0;
+    height: var(--button-height);
+    outline: none;
+    letter-spacing: 0;
+    line-height: var(--button-height);
+    font-size: calc(1.4 * var(--unit));
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition:
+        box-shadow 0.2s var(--animation-curve-fast-out-linear-in),
+        background-color 0.2s var(--animation-curve-default),
+        color 0.2s var(--animation-curve-default);
+    cursor: pointer;
+
+    &>input {
+        position: absolute;
+        height: 0.1px;
+        width: 0.1px;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+    &::-moz-focus-inner {
+        border: 0;
+    }
+
+    &>svg {
+        display: inline-block;
+        fill: currentColor;
+        font-size: 120%;
+        height: var(--button-height);
+        vertical-align: top;
+        width: 1em;
+    }
+
+    &>* {
+        pointer-events: none;
+    }
+}
+
+.toggle {
+    background: transparent;
+    border-radius: 50%;
+    composes: button;
+    vertical-align: middle;
+    width: var(--button-height);
+
+    &>.icon,
+    & svg {
+        font-size: var(--button-toggle-font-size);
+        line-height: var(--button-height);
+        vertical-align: top;
+    }
+}
+
+.primary {
+    &.toggle {
+        color: var(--button-primary-color);
+
+        &:active {
+            background: var(--button-primary-color-hover);
+        }
+    }
+}
+
+.accent {
+    &.toggle {
+        color: var(--button-accent-color);
+
+        &:active {
+            background: var(--button-accent-color-hover);
+        }
+    }
+}
+
+.neutral {
+
+    &.inverse {
+        &.toggle {
+            color: var(--button-neutral-color);
+
+            &:focus:not(:active) {
+                background: var(--button-neutral-color-hover);
+            }
+        }
+    }
+}

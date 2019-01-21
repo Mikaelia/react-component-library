@@ -5,9 +5,10 @@ import PropTypes from "prop-types";
 const Navigation = ({ components }) => {
   return (
     <ul className="navigation">
+      <h3 className="navigation-header">Components</h3>
       {components.map(name => {
         return (
-          <li key={name}>
+          <li className="navigation-item" key={name}>
             <a href={`#${name}`}>{name}</a>
           </li>
         );

@@ -3,7 +3,7 @@
 @import './config.module.scss';
 
 .button {
-    display: flex;
+    display: inline-block;
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -47,13 +47,15 @@
         fill: currentColor;
         font-size: 120%;
         height: var(--button-height);
-        vertical-align: top;
+        vertical-align: center;
         width: 1em;
     }
 
     &>* {
         pointer-events: none;
     }
+
+
 }
 
 .squared {
@@ -64,6 +66,7 @@
     & .icon {
         font-size: 120%;
         margin-right: var(--button-squared-icon-margin);
+        transform: translateY(-1.5px);
         vertical-align: middle;
     }
 
@@ -93,6 +96,9 @@
     background: transparent;
     composes: button;
     composes: squared;
+
+
+
 }
 
 .round {
@@ -133,17 +139,10 @@
         color: var(--button-primary-color);
 
         &:hover {
-            background: var(--button-primary-color-hover);
+            background: var(--button-primary-color-fade);
         }
     }
 
-    &.toggle {
-        color: var(--button-primary-color);
-
-        &:focus:not(:active) {
-            background: var(--button-primary-color-hover);
-        }
-    }
 }
 
 .accent {
@@ -158,15 +157,7 @@
         color: var(--button-accent-color);
 
         &:hover {
-            background: var(--button-accent-color-hover);
-        }
-    }
-
-    &.toggle {
-        color: var(--button-accent-color);
-
-        &:focus:not(:active) {
-            background: var(--button-accent-color-hover);
+            background: var(--button-accent-color-fade);
         }
     }
 }
@@ -183,17 +174,14 @@
         color: var(--button-neutral-color-contrast);
 
         &:hover {
-            background: var(--button-neutral-color-hover);
+            background: var(--button-neutral-color-fade);
+        }
+
+        &:active {
+            background: transparent;
         }
     }
 
-    &.toggle {
-        color: var(--button-neutral-color-contrast);
-
-        &:focus:not(:active) {
-            background: var(--button-neutral-color-hover);
-        }
-    }
 
     &.inverse {
 
@@ -211,12 +199,6 @@
             }
         }
 
-        &.toggle {
-            color: var(--button-neutral-color);
 
-            &:focus:not(:active) {
-                background: var(--button-neutral-color-hover);
-            }
-        }
     }
 }

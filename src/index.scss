@@ -1,0 +1,135 @@
+/* Global styles */
+
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-size-adjust: 100%;
+    -webkit-touch-callout: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-text);
+    box-sizing: border-box;
+    font-family: var(--preferred-font);
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-size-adjust: 100%;
+}
+
+a,
+a:visited {
+    color: #142733;
+}
+
+.clear {
+    clear: both;
+}
+
+td {
+    border-top: solid 1px #d3d3d3;
+}
+
+td,
+th {
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+/* Documentation site component styles */
+.docs {
+    display: grid;
+
+    grid-template-rows: 5rem 1fr 10rem;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.header {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    background: var(--color-primary);
+    box-shadow: var(--shadow-4p);
+}
+
+.navigation {
+    margin-top: 2rem;
+    grid-row: 2 / 3;
+    grid-column: 1/ 4;
+    min-width: 170px;
+    list-style-type: none;
+    padding: 0;
+    background: var(--color-white);
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+    &-header {
+        padding-left: .8rem;
+    }
+
+    &-item {
+        padding: .8rem;
+        transition: all .3s var(--animation-curve-default);
+
+        &:hover {
+            background: var(--hover-shadow);
+        }
+
+        & a {
+            position: relative;
+            text-decoration: none;
+            color: var(--color-text);
+
+
+        }
+    }
+}
+
+.component-page {
+    margin-top: 2rem;
+    grid-row: 2 / 3;
+    grid-column: 5 / 12;
+    flex: 3;
+
+    &-header {
+        font-size: 60px;
+        letter-spacing: 0.4998px;
+        font-weight: 200;
+    }
+
+    &-text {
+        vertical-align: top;
+        margin-bottom: 3rem;
+    }
+}
+
+.example {
+    border: solid 1px #d3d3d3;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: var(--color-white);
+
+    & h4:first-of-type {
+        margin-top: 0;
+    }
+
+    & p:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.props tr td:last-of-type {
+    text-align: center;
+
+    & th,
+    td {
+        text-align: left;
+        padding: 5px;
+    }
+}

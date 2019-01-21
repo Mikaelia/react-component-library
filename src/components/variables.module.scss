@@ -4,12 +4,17 @@
     --color-text: var(--palette-grey-900);
     --color-text-secondary: var(--palette-grey-600);
 
-    --color-primary: var(--palette-indigo-500);
-    --color-primary-dark: var(--palette-indigo-700);
-    --color-accent: var(--palette-pink-a200);
-    --color-accent-dark: var(--palette-pink-700);
+    --color-primary: var(--palette-blue-500);
+    --color-primary-dark: var(--palette-blue-700);
+    --color-primary-fade: rgba(96, 125, 139, .2);
+    --color-accent: var(--palette-teal-300);
+    --color-accent-dark: var(--palette-teal-700);
+    --color-accent-fade: rgba(0, 121, 107, .2);
     --color-primary-contrast: var(--color-dark-contrast);
     --color-accent-contrast: var(--color-dark-contrast);
+    --color-neutral: var(--color-white);
+    --color-neutral-contrast: var(--palette-grey-900);
+    --color-neutral-contrast-fade: rgba(33, 33, 33, .2);
 
     --unit: 10px;
 
@@ -64,12 +69,14 @@
     --zdepth-shadow-4: 0 14px 45px rgba(0, 0, 0, 0.25), 0 10px 18px rgba(0, 0, 0, 0.22);
     --zdepth-shadow-5: 0 19px 60px rgba(0, 0, 0, 0.3), 0 15px 20px rgba(0, 0, 0, 0.22);
 
+    --hover-shadow: rgba(0, 0, 0, .08);
+
     --animation-duration: 0.35s;
     --animation-delay: calc(var(--animation-duration) / 5);
     --animation-curve-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1);
     --animation-curve-linear-out-slow-in: cubic-bezier(0, 0, 0.2, 1);
     --animation-curve-fast-out-linear-in: cubic-bezier(0.4, 0, 1, 1);
-    --animation-curve-default: var(--animation-curve-fast-out-slow-in);
+    --animation-curve-default: var(--animation-curve-linear-out-slow-in);
 
     --z-index-highest: 300;
     --z-index-higher: 200;
@@ -78,21 +85,4 @@
     --z-index-low: -100;
     --z-index-lower: -200;
 
-    --reset: {
-        box-sizing: border-box;
-        font-family: var(--preferred-font);
-        -webkit-font-smoothing: antialiased;
-        font-smoothing: antialiased;
-        text-size-adjust: 100%;
-
-        & *,
-        & *::after,
-        & *::before {
-            box-sizing: border-box;
-            -webkit-font-smoothing: antialiased;
-            font-smoothing: antialiased;
-            text-size-adjust: 100%;
-            -webkit-touch-callout: none;
-        }
-    }
 }

@@ -7,9 +7,9 @@ const ComponentPage = ({ component }) => {
   const { name, description, props, examples } = component;
 
   return (
-    <div className="componentpage">
-      <h2>{name}</h2>
-      <p>{description}</p>
+    <div className="component-page">
+      <h2 className="component-page-header">{name}</h2>
+      <p className="component-page-text">{description}</p>
 
       <h3>Example{examples.length > 1 && "s"}</h3>
       {examples.length > 0
