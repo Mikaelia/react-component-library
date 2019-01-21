@@ -1,6 +1,8 @@
 # React Components
 
-Documentation system and an in-progress library of react components
+Here I'm working on developing a documentation system and library of tested, reusable, and customizable React components that I can use for my future projects. 
+
+Design inspired by React-Toolkit and MaterialUI
 
 > View live at: http://mikaelia.github.io/react-component-library/
 
