@@ -11,14 +11,14 @@
     -webkit-touch-callout: none;
 }
 
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--color-text);
-    box-sizing: border-box;
-    font-family: var(--preferred-font);
-    -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-    text-size-adjust: 100%;
 }
 
 a,
