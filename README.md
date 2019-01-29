@@ -12,10 +12,10 @@ Enjoy!
 
 [Component documentation](http://mikaelia.github.io/component-library)
 
-## Roadmap
-[x] Button
-[x] IconButton
-[ ] Input
+## Component Roadmap
+- [x] Button
+- [x] IconButton
+- [ ] Input
 
 ## ScreenShots
 
