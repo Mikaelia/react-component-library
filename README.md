@@ -10,7 +10,7 @@ Enjoy!
 
 ## Docs
 
-[Component documentation](http://mikaelia.github.io/component-library)
+[Component documentation](http://mikaelia.github.io/react-component-library/)
 
 ## Component Roadmap
 - [x] Button
