@@ -2,6 +2,8 @@
 
 This project was an exploration in how to create my own component library, bundle it, publish it to NPM, and document it via a platform that I created from scratch. 
 
+Documentation is interactive, provides code examples, and displays component prop options
+
 Package can be viewed here: https://www.npmjs.com/package/component-library-mikaelia
 
 And installed via:
@@ -9,8 +11,6 @@ And installed via:
 npm install component-library
 ```
 
-
-Design inspired by React-Toolkit and MaterialUI
 
 > View documentation platform at: http://mikaelia.github.io/component-documentation-platform/
 
