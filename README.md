@@ -12,13 +12,9 @@ npm install component-library
 
 Design inspired by React-Toolkit and MaterialUI
 
-> View live at: http://mikaelia.github.io/react-component-library/
+> View documentation platform at: http://mikaelia.github.io/component-documentation-platform/
 
 Enjoy!
-
-## Docs
-
-[Component documentation](http://mikaelia.github.io/react-component-library/)
 
 ## ScreenShots
 
