@@ -12,7 +12,7 @@ npm install component-library
 ```
 
 
-> View documentation platform at: http://mikaelia.github.io/component-documentation-platform/
+> View documentation platform at: http://mikaelia.github.io/react-component-library/
 
 Enjoy!
 
