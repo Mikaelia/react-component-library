@@ -76,7 +76,7 @@
         "postcss-safe-parser": "4.0.1",
         "prismjs": "^1.6.0",
         "react-app-polyfill": "^0.2.0",
-        "react-dev-utils": "^7.0.1",
+        "react-dev-utils": "^11.0.4",
         "react-docgen": "^2.14.0",
         "react-prism": "^4.3.2",
         "react-test-renderer": "^16.0.0-alpha.12",
